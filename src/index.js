@@ -5,16 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {  BrowserRouter,  Routes,  Route,  Navigate,  useLocation} from "react-router-dom"
 import Mainpage from './Mainpage';
+import AssocHome from './AssocHome';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Routes>
-    <Route path="/" element={<App /> } />
-    <Route path="/mainpage" element={<Mainpage /> } />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<App /> } />
+        <Route path="/adminhome" element={<Mainpage /> } />
+        <Route path="/assochome" element={<AssocHome />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );
